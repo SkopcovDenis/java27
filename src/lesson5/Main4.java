@@ -20,9 +20,7 @@ public class Main4 {
             if (country.equalsIgnoreCase(tours[i][0])){
                 System.out.println(tours[i][0] + ", на " + tours[i][1] + ". " + tours[i][2] + ". "
                         + tours[i][3] + ". цена - "  + tours[i][4]);
-
             }
-
         }
         System.out.println("Сколько максимум дней для поездки?");
         String dayStr = scanner.nextLine();
@@ -33,7 +31,6 @@ public class Main4 {
            if(dayFromTour <= day){
                System.out.println(tours[i][0] + ", на " + tours[i][1] + ". " + tours[i][2] + ". "
                        + tours[i][3] + ". цена - "  + tours[i][4]);
-
            }
         }
         //1. все туры ОТ и ДО введенной цены
@@ -43,22 +40,20 @@ public class Main4 {
         System.out.println("На какую максимальную сумму рассчитываете?");
         String moneyMaxStr = scanner.nextLine();
         int moneyMax = Integer.parseInt(moneyMaxStr);
+        int sumPrice = 0;
+        int costPrice = 0;
 
         for (int i = 0; i < tours.length; i++) {
             int moneyForTour = Integer.parseInt(tours[i][4].replaceAll("[\\D]", ""));
             if (moneyForTour <= moneyMax && moneyForTour >= moneyMin) {
+                costPrice++;
+                sumPrice = sumPrice + moneyForTour;
                 System.out.println(tours[i][0] + ", на " + tours[i][1] + ", " + tours[i][2] + ", "
                         + tours[i][3] + ", цена - " + tours[i][4]);
+            }else {
+
             }
-        }
-        //2 Средняя цена тура в вашем агенстве
-        int sumPrice = 0;
-        int costPrice = 0;
-
-        for (int i = 0; tours.length <= 0; i++){
-
-
-        }
+        }System.out.println("Средняя цена тура: " + sumPrice / costPrice + "рублей");
 
         //3. Туры от ... звезд и выше
         System.out.println("От скольки звезд отель?");

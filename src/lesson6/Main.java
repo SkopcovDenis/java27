@@ -2,11 +2,16 @@ package lesson6;
 
 public class Main {
     public static void main(String[] args) {
-        int count = StringUtils.countGlassFromText("gfsigjsk");
+        int count = DZMetodSoglasnie.countSoglasnFromText("gfsigjsk");
         System.out.println(count);
 
-        StringUtils.printTextByWorlds(" fsdgfbgbrsf . ff, fefad");
+        int count2 = StringUtils.countGlassFromText("fimgaoy");
+        System.out.println(count2);
+
+        StringUtils.printTextByWords(" fsdgfbgbrsf . ff, fefad");
         System.out.println("fvsfgs");
+
+        StringUtils.coding("qweRTjkO+kO-NBH*MN zoP");
 
     }
 }
